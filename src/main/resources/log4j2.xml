@@ -5,15 +5,10 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
 
-        <!--append="false" :根据其下日志策略,每次清空文件重新输入日志,可用于测试-->
-        <File name="log" fileName="E:\code\flink-dynamic-indicator\src\main\java\com\hundsun\art\test.log" append="false">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
-        </File>
     </Appenders>
     <Loggers>
         <Root level="info">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="log"/>
         </Root>
     </Loggers>
 </Configuration>
